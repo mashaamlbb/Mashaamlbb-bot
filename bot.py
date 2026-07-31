@@ -44,8 +44,8 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
             timeout=10
         )
 
-        if response.status_code == 200:
-    await update.message.reply_text(
+        if response.status_code == 200
+            await update.message.reply_text(
         "✅ Gamersberg berjaya diakses!\n\n"
         + response.text[:500]
     )
