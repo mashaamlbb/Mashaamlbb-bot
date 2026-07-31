@@ -49,12 +49,9 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
             if "Kitsune" in text:
                 await update.message.reply_text(
-                    "🦊 Jumpa Kitsune dalam data!"
+                    text[:2000]
                 )
-            else:
-                await update.message.reply_text(
-                    "❌ Tiada Kitsune dijumpai"
-                )
+      
 
         else:
             await update.message.reply_text(
