@@ -34,7 +34,7 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
     import requests
 
     try:
-        url = "https://blox-fruits-api.onrender.com/api/bloxfruits/stock"
+        url = "https://www.gamersberg.com/blox-fruits/stock"
 
         headers = {
             "User-Agent": "Mozilla/5.0"
@@ -45,7 +45,7 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
             headers=headers,
             timeout=10
         )
-
+        text = response.text
         if response.status_code == 200:
             data = response.json()
             
