@@ -3,6 +3,9 @@ from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandl
 
 import os
 
+from flask import Flask
+from threading import Thread
+
 TOKEN = os.getenv("TOKEN")
 
 
@@ -84,4 +87,15 @@ app.add_handler(
 )
 
 print("Bot sedang berjalan...")
+flask_app = Flask(__name__)
+
+@flask_app.route("/")
+def home():
+    return "Bot is running!"
+
+def run_web():
+    flask_app.run(host="0.0.0.0", port=10000)
+
+Thread(target=run_web).start()
+
 app.run_polling()
