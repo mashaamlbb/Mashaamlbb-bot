@@ -47,7 +47,8 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
         if response.status_code == 200:
-            text = response.text
+            data = response.json()
+            
 
             await update.message.reply_text(
                 "Data penuh:\n" + str(data)
