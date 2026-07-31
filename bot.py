@@ -29,6 +29,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
+        await update.message.reply_text("Stock function dipanggil")
     import requests
 
     try:
