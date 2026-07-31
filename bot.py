@@ -45,7 +45,7 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
         if response.status_code == 200:
-    text = response.text
+            text = response.text
 
     if "Kitsune" in text:
         await update.message.reply_text(
