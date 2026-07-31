@@ -50,8 +50,10 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text = response.text
 
             await update.message.reply_text(
-                text[:2000]
+                "Data penuh:\n" + str(data)
             )
+                
+            
 
         else:
             await update.message.reply_text(
