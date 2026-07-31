@@ -29,7 +29,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
-        await update.message.reply_text("Stock function dipanggil")
+    await update.message.reply_text("Stock function dipanggil")
+
     import requests
 
     try:
@@ -48,11 +49,9 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if response.status_code == 200:
             text = response.text
 
-            if "Kitsune" in text:
-                await update.message.reply_text(
-                    text[:2000]
-                )
-      
+            await update.message.reply_text(
+                text[:2000]
+            )
 
         else:
             await update.message.reply_text(
