@@ -45,11 +45,10 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
         if response.status_code == 200:
-            await update.message.reply_text(
-                "🍎 Blox Fruits Stock\n\n"
-                "✅ Berjaya sambung Gamersberg!\n\n"
-                "Data stock sedang diproses..."
-            )
+    await update.message.reply_text(
+        "✅ Gamersberg berjaya diakses!\n\n"
+        + response.text[:500]
+    )
         else:
             await update.message.reply_text(
                 "❌ Gagal mengambil data Gamersberg."
