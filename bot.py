@@ -20,7 +20,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
     await update.message.reply_text(
-        "🤖 Jackry Bot\n\nPilih fungsi:",
+        "🌌 Mashaamlbb assistant\n\nPilih fungsi:",
         reply_markup=reply_markup
     )
 
