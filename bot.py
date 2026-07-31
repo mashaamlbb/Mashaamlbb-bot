@@ -34,7 +34,7 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
     import requests
 
     try:
-        url = "https://www.gamersberg.com/blox-fruits/stock"
+        url = "https://blox-fruits-api.onrender.com/api/bloxfruits/stock"
 
         headers = {
             "User-Agent": "Mozilla/5.0"
