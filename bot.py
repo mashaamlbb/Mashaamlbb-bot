@@ -45,15 +45,16 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
         if response.status_code == 200:
-            await update.message.reply_text(
-        "✅ Gamersberg berjaya diakses!\n\n"
-        + response.text[:500]
-    )
-    
-        else:
-            await update.message.reply_text(
-                "❌ Gagal mengambil data Gamersberg."
-            )
+    text = response.text
+
+    if "Kitsune" in text:
+        await update.message.reply_text(
+            "🦊 Jumpa Kitsune dalam data!"
+        )
+    else:
+        await update.message.reply_text(
+            "❌ Tiada Kitsune dijumpai"
+        )
 
     except Exception as e:
         await update.message.reply_text(
