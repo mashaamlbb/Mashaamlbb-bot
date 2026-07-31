@@ -49,6 +49,7 @@ async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "✅ Gamersberg berjaya diakses!\n\n"
         + response.text[:500]
     )
+    
         else:
             await update.message.reply_text(
                 "❌ Gagal mengambil data Gamersberg."
